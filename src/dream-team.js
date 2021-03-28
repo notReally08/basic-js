@@ -8,6 +8,6 @@ module.exports = function createDreamTeam(members) {
     if(a < b) { return -1; }
     if(a > b) { return 1; }
     return 0;
-  }).join("")
-  return res
+  })
+  return res.join("")
 };
