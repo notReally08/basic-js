@@ -1,10 +1,13 @@
 const CustomError = require("../extensions/custom-error");
 
 module.exports = function countCats(backyard) {
-  let cats = [];
-  backyard.forEach(innerArr => {
-    const arr = innerArr.filter(item => item === '^^');
-    cats = [...cats, ...arr];
+  let count = 0;
+  backyard.forEach(el => {
+    el.forEach(it => {
+      if(it === "^^") {
+        count++;
+      }
+    })
   })
-  return cats.length;
+  return count
 };
